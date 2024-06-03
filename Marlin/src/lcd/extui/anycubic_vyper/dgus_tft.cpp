@@ -1222,8 +1222,8 @@ namespace Anycubic {
       if (PENDING(ms, flash_time)) return;
       flash_time = ms + 1500;
 
-      TERN_(HAS_HOTEND, send_temperature_hotend(TXT_PREHEAT_HOTEND));
-      TERN_(HAS_HEATED_BED, send_temperature_bed(TXT_PREHEAT_BED));
+      TERN_(HAS_HOTEND, send_temperature_hotend(TXT_MAIN_HOTEND));
+      TERN_(HAS_HEATED_BED, send_temperature_bed(TXT_MAIN_BED));
     #endif
   }
 
